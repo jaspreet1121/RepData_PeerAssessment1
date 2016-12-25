@@ -14,7 +14,7 @@ To read the file using `read.csv`
 act<-read.csv("activity.csv")
 ```
 
-To move forward we separate hours and minutes from interval variable of the dataset. We also combine these `hour` and `minute` variable with the `date` variable to form the new `datex` variable.
+To move forward we separate hours and minutes from interval variable of the dataset. We also combine these `hour` and `minute` variable with the `date` variable to form the new `datex` variable. The interval is jumping from the 55 to next value that is 100 which we cannot allow and to bring a uniform change we change interval to `interval_new` which represents the minutes of the day.
 
 ```{r process}
 act$hour<-as.integer(act$interval/100)
